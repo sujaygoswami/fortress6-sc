@@ -1,0 +1,57 @@
+:root {
+  --special-tag-item-font: 'TheSans';
+  --special-tag-item-font-weight: 300;
+  --special-tag-color: #ea4d57;
+}
+
+@font-face {
+  font-family: 'TheSans';
+  src: url("../fonts/TheSans-B4SemiLight.woff2") format("woff2"), url("../fonts/TheSans-B4SemiLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+.spedial-side-attched-tag {
+  position: fixed;
+  z-index: 50;
+  right: 0px;
+  top: 42vh;
+  font-family: var(--special-tag-item-font);
+  font-weight: var(--special-tag-item-font-weight);
+}
+.spedial-side-attched-tag .main-tag {
+  display: inline-block;
+  font-size: 31px;
+  text-transform: uppercase;
+  color: white;
+  line-height: normal;
+  padding: 13px 15px 9px 25px;
+  background-color: var(--special-tag-color);
+  border-radius: 50px 0 0 50px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.spedial-side-attched-tag .main-tag a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.spedial-side-attched-tag .main-tag.on-scrolled {
+  font-size: 19px;
+  padding: 8px 9px 6px 17px;
+}
+
+.travel-item.item-with-special-flag .teaserimg {
+  position: relative;
+  padding-top: 2px;
+}
+.travel-item.item-with-special-flag .teaserimg .the-flag {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 0px;
+  right: 10px;
+}
+.travel-item.item-with-special-flag .teaserimg .the-flag img {
+  width: 17px;
+}

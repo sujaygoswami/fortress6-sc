@@ -1,0 +1,26 @@
+
+
+/usr/www/users/sailim/play_typo3v104
+
+ssh: sailim@dedi3326.your-server.de -p222
+
+pw: g92ks10v25Dj74j9
+
+
+https://playground.sailing-classics.com/typo3/
+
+
+
+user sailimserver dedi3326.your-server.deport 222pw: g92ks10v25Dj74j9
+
+
+backend
+
+https://playground.sailing-classics.com/typo3
+
+Neuer Zugang: sc-terminator2
+
+kg4D28XDnyZ%
+
+
+https://playground.sailing-classics.com/segeltoerns-segelreviere
