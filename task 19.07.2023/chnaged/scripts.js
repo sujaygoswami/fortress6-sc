@@ -13586,6 +13586,30 @@ jQuery(document).ready(function(){
 
     var site = {}
 
+
+
+
+    // hanging form
+    jQuery('.hanging-form-close').click(function(){
+        jQuery('.collapse-expand-radio').attr('checked', true);
+        jQuery('.hanging-search-form.collapsed').show();
+        jQuery('.hanging-search-form.expanded .main-wrap').addClass('slideOutUp');
+        jQuery('.hanging-search-form.collapsed .main-wrap').addClass('slideInDown');
+
+        jQuery('.hanging-search-form.expanded .main-wrap').removeClass('slideInDown');
+        jQuery('.hanging-search-form.collapsed .main-wrap').removeClass('slideOutUp');
+    });
+    jQuery('.hanging-search-form.collapsed .main-wrap').click(function(){
+        jQuery('.collapse-expand-radio').attr('checked', true);
+        jQuery('.hanging-search-form.expanded .main-wrap').removeClass('slideOutUp');
+        jQuery('.hanging-search-form.collapsed .main-wrap').removeClass('slideInDown');
+
+        jQuery('.hanging-search-form.expanded .main-wrap').addClass('slideInDown');
+        jQuery('.hanging-search-form.collapsed .main-wrap').addClass('slideOutUp');
+    });
+
+    
+
     // on scroll special tag behave function
     site.SPECIALTAGSCROLLFUNCTION = function() {
 
@@ -13604,13 +13628,53 @@ jQuery(document).ready(function(){
       
       };
 
-      jQuery(window).scroll(function() {
+
+
+
+      site.HANGINGFORMSCROLLFUNCTION = function() {
+
+
+
+       
+            if (jQuery(document).scrollTop() > 100) {
+                jQuery('.hanging-search-form.collapsed').show();
+                jQuery('.hanging-search-form.expanded .main-wrap').addClass('slideOutUp');
+                jQuery('.hanging-search-form.collapsed .main-wrap').addClass('slideInDown');
+        
+                jQuery('.hanging-search-form.expanded .main-wrap').removeClass('slideInDown');
+                jQuery('.hanging-search-form.collapsed .main-wrap').removeClass('slideOutUp');
+              }
+              else {
+                jQuery('.hanging-search-form.expanded .main-wrap').removeClass('slideOutUp');
+                jQuery('.hanging-search-form.collapsed .main-wrap').removeClass('slideInDown');
+
+                jQuery('.hanging-search-form.expanded .main-wrap').addClass('slideInDown');
+                jQuery('.hanging-search-form.collapsed .main-wrap').addClass('slideOutUp');
+              }
+       
+        
+        
+      
+      };
+
+      jQuery(window).on('scroll', function() {
         site.SPECIALTAGSCROLLFUNCTION();
+
+        if (!$('.collapse-expand-radio').is(':checked')) {
+            site.HANGINGFORMSCROLLFUNCTION();
+        };
+        
       });
       
       site.SPECIALTAGSCROLLFUNCTION();
+      site.HANGINGFORMSCROLLFUNCTION();
 
 
+
+//  footer top
+jQuery('#footer-top').parent().addClass('footer-top-parent');
+jQuery('.footer-top-parent').detach().prependTo('#footer');
+jQuery('#footer-top > .container > .row > div').addClass('footer-block');
 
 
 });
