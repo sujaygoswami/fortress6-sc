@@ -1,4 +1,4 @@
-﻿@import url('special-tag.css');
+﻿
 
 
 /*!
@@ -8506,7 +8506,7 @@ a:hover {
 .section .container .filter-all .travel-teaser .travel-item .travel-content {
   border-bottom: 1px solid #5a7e96;
   padding: 25px 0;
-  height: 220px;
+  /* height: 220px; */
 }
 .section .container .filter-all .travel-teaser .travel-item .teaserimg {
   width: 130px;
@@ -8516,7 +8516,8 @@ a:hover {
 }
 .section .container .filter-all .travel-teaser .travel-item .teasertext p {
   font-size: 14px;
-  line-height: 12px
+  line-height: 12px;
+  margin-bottom: 0px;
 }
 .section .container .filter-all .travel-teaser .travel-item .teasertext p span {
   display: block;
@@ -8525,11 +8526,15 @@ a:hover {
 .section .container .filter-all .travel-teaser .travel-item .teasertext p.category {
   line-height: 24px
 }
+.section .container .filter-all .travel-teaser .travel-item .teasertext h3{
+  line-height: 18px;
+  margin-bottom: 5px;
+}
 .section .container .filter-all .travel-teaser .travel-item .teasertext h3 a {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 21px;
   font-weight: 600;
-  color: #002748
+  color: #002748;
 }
 .section .container .filter-all .travel-teaser .travel-item .teasertext h3 a:after {
   border: solid transparent;

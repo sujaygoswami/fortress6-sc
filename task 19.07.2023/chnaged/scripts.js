@@ -13491,6 +13491,11 @@ function(a, b) {
                             else{
                                 $('#'+filterSection+' .lazy-loader').fadeOut();
                             }
+                            setTimeout(function() {
+                                jQuery('.teasertext').matchHeight({byRow: 1});
+                                console.log("Matched height");
+                            }, 0);
+                           
                     }
                 });
              });
@@ -13613,10 +13618,13 @@ jQuery(document).ready(function(){
     // on scroll special tag behave function
     site.SPECIALTAGSCROLLFUNCTION = function() {
 
+        var CAROUSELHEIGHT = jQuery('#slideshow .carousel').height();
+        
+
 
 
         jQuery('.spedial-side-attched-tag').each(function(){
-            if (jQuery(document).scrollTop() > 100) {
+            if (jQuery(document).scrollTop() > CAROUSELHEIGHT / 2) {
                 jQuery(this).find('.main-tag').addClass('on-scrolled');
               }
               else {
@@ -13678,6 +13686,10 @@ jQuery('#footer-top > .container > .row > div').addClass('footer-block');
 
 
 });
+
+// jQuery(window).load(function(){
+//     jQuery('.travel-content').matchHeight();
+// });
 // task special tag and hanging form july 2023
 
 
