@@ -22,6 +22,10 @@
   font-style: normal;
   font-display: swap;
 }
+body .section .container a.lightbox {
+  z-index: inherit;
+}
+
 @media (max-width: 768px) and (min-width: 751px) {
   body .navbar-fixed-top .container {
     width: 700px;
